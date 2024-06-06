@@ -1,0 +1,108 @@
+noah@snort3:/tmp/rules$ clear; sudo /usr/local/bin/pulledpork.pl -c /usr/local/etc/pulledpork/pulledpork.conf -l -P -E -H SIGHUP -T -vv
+    https://github.com/shirkdog/pulledpork
+      _____ ____
+     `----,\    )
+      `--==\\  /    PulledPork v0.8.0 - The only positive thing to come out of 2020...well this and take-out liquor!
+       `--==\\/
+     .-~~~~-.Y|\\_  Copyright (C) 2009-2021 JJ Cummings, Michael Shirk
+  @_/        /  66\_  and the PulledPork Team!
+    |    \   \   _(")
+     \   /-| ||'--'  Rules give me wings!
+      \_\  \_\\
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Config File Variable Debug /usr/local/etc/pulledpork/pulledpork.conf
+	sid_msg = /usr/local/etc/snort/sid-msg.map
+	sorule_path = /usr/local/etc/so_rules/
+	snort_control = /usr/local/bin/snort_control
+	snort_path = /usr/local/bin/snort
+	pid_path = /var/log/snort/snort.pid
+	distro = ubuntu-18-4
+	ips_policy = security
+	temp_path = /tmp
+	rule_path = /usr/local/etc/rules/snort.rules
+	sid_changelog = /var/log/sid_changes.log
+	version = 0.8.0
+	local_rules = /usr/local/etc/rules/local.rules
+	config_path = /usr/local/etc/snort/snort.conf
+	rule_url = ARRAY(0x55d0a3f887a0)
+	block_list = /usr/local/etc/lists/default.blocklist
+	IPRVersion = /usr/local/etc/lists
+	ignore = deleted.rules,experimental.rules,local.rules
+	sid_msg_version = 2
+MISC (CLI and Autovar) Variable Debug:
+	Process flag specified!
+	arch Def is: x86-64
+	Operating System is: linux
+	CA Certificate File is: OS Default
+	Config Path is: /usr/local/etc/pulledpork/pulledpork.conf
+	Distro Def is: ubuntu-18-4
+	Write ONLY enabled rules flag is Set
+	security policy specified
+	local.rules path is: /usr/local/etc/rules/local.rules
+	Rules file is: /usr/local/etc/rules/snort.rules
+	sid changes will be logged to: /var/log/sid_changes.log
+	sid-msg.map Output Path is: /usr/local/etc/snort/sid-msg.map
+	Sending signal Flag is Set: SIGHUP
+	Snort Version is: 3.1.0.0
+	Snort Config File: /usr/local/etc/snort/snort.conf
+	Snort Path is: /usr/local/bin/snort
+	Logging Flag is Set
+	Text Rules only Flag is Set
+	Extra Verbose Flag is Set
+	Verbose Flag is Set
+	File(s) to ignore = deleted.rules,experimental.rules,local.rules
+	Base URL is: https://www.snort.org/reg-rules/|snortrules-snapshot.tar.gz|<oinkcode>
+	https://snort.org/downloads/ip-block-list|IPBLOCKLIST|open
+Checking latest MD5 for snortrules-snapshot-3100.tar.gz....
+	Fetching md5sum for: snortrules-snapshot-3100.tar.gz.md5
+** GET https://www.snort.org/rules/snortrules-snapshot-3100.tar.gz.md5?oinkcode=<oinkcode> ==> 200 OK
+	most recent rules file digest: 18ffe08597122690a09c5fb4e7a8498b
+	current local rules file  digest: 18ffe08597122690a09c5fb4e7a8498b
+	The MD5 for snortrules-snapshot-3100.tar.gz matched 18ffe08597122690a09c5fb4e7a8498b
+
+IP Blocklist download of https://snort.org/downloads/ip-block-list....
+** GET https://snort.org/downloads/ip-block-list ==> 302 Found
+** GET https://snort-org-site.s3.amazonaws.com/production/document_files/files/000/004/688/original/ip_filter.blf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210219%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210219T084311Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=1c96f37e8cf52d3e1f2bb9327d2199f96ac0c0013f0f39e79928f45682df1739 ==> 200 OK (1s)
+	Reading IP List...
+Prepping rules from snortrules-snapshot-3100.tar.gz for work....
+	extracting contents of /tmp/snortrules-snapshot-3100.tar.gz...
+	Ignoring plaintext rules: deleted.rules
+	Ignoring plaintext rules: experimental.rules
+	Ignoring plaintext rules: local.rules
+	Reading rules...
+Snort 3.0 detected, future Snort 3.0 processing
+	Reading rules...
+Cleanup....
+	removed 2 temporary snort files or directories from /tmp/tha_rules!
+Writing Blocklist File /usr/local/etc/lists/default.blocklist....
+Writing Blocklist Version 895693880 to /usr/local/etc/lists/IPRVersion.dat....
+Activating security rulesets....
+	Done
+Setting Flowbit State....
+	Done
+Writing /usr/local/etc/rules/snort.rules....
+	Done
+Generating sid-msg.map....
+	Done
+Writing v2 /usr/local/etc/snort/sid-msg.map....
+Use of uninitialized value in concatenation (.) or string at /usr/local/bin/pulledpork.pl line 1379.
+	Done
+Signaling Time....
+	Sent SIGHUP signal to 700 from /var/log/snort/snort.pid with result 1
+Writing /var/log/sid_changes.log....
+	Done
+Rule Stats...
+	New:-------0
+	Deleted:---1
+	Enabled Rules:----1
+	Dropped Rules:----0
+	Disabled Rules:---0
+	Total Rules:------1
+IP Blocklist Stats...
+	Total IPs:-----818
+
+Done
+Please review /var/log/sid_changes.log for additional details
+Fly Piggy Fly!
+

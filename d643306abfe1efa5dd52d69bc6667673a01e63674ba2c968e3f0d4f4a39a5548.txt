@@ -1,0 +1,17 @@
+ubuntu@ubuntu-server:~$ sudo service snort3 status
+● snort3.service - Snort3 NIDS Daemon
+     Loaded: loaded (/lib/systemd/system/snort3.service; enabled; vendor preset: enabled)
+     Active: failed (Result: signal) since Mon 2020-06-29 03:42:48 CEST; 4h 48min ago
+    Process: 65137 ExecStart=/usr/local/bin/snort -c /usr/local/etc/snort/snort.lua -s 65535 -k none -l /var/log/snort -D -u snort -g snort -i eth1 -m 0x1b (code=killed, signal=SEGV)
+   Main PID: 65137 (code=killed, signal=SEGV)
+
+jun 28 19:42:41 ubuntu-server snort[65137]:                    dcerpc:       10       1
+jun 28 19:42:41 ubuntu-server snort[65137]:                      dhcp:        1       1
+jun 28 19:42:41 ubuntu-server snort[65137]:                       dns:       54       6
+jun 28 19:42:41 ubuntu-server snort[65137]:                      drda:        3       0
+jun 28 19:42:41 ubuntu-server snort[65137]:                       ftp:       42       3
+jun 28 19:42:41 ubuntu-server snort[65137]:                  ftp-data:       45    3298
+jun 28 19:42:41 ubuntu-server snort[65137]:                      http:     3991    3832
+jun 29 03:42:48 ubuntu-server snort[65137]:                     http2:
+jun 29 03:42:48 ubuntu-server systemd[1]: snort3.service: Main process exited, code=killed, status=11/SEGV
+jun 29 03:42:48 ubuntu-server systemd[1]: snort3.service: Failed with result 'signal'.

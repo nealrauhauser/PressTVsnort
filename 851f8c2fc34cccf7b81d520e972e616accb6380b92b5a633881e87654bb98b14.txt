@@ -1,0 +1,28 @@
+Reputation config:
+ERROR: c:\snort\etc\snort.conf(512) => Unable to open address file c:\snort\rules\white.list, Error: No such file or directory
+Fatal Error, Quitting..
+
+
+
+
+
+108 # If you are using reputation preprocessor set these
+109 # Currently there is a bug with relative paths, they are relative to where snort is
+110 # not relative to snort.conf like the above variables
+111 # This is completely inconsistent with how other vars work, BUG 89986
+112 # Set the absolute path appropriately
+113 var WHITE_LIST_PATH c:\snort\rules
+114 var BLACK_LIST_PATH c:\snort\rules
+
+
+
+
+
+
+507 # Reputation preprocessor. For more information see README.reputation
+508 preprocessor reputation: \
+509   memcap 500, \
+510   priority whitelist, \
+511   nested_ip inner, \
+512   whitelist $WHITE_LIST_PATH\white.list, \
+513   blacklist $BLACK_LIST_PATH\black.list

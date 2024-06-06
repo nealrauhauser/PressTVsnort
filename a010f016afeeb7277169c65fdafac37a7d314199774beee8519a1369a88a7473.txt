@@ -1,0 +1,75 @@
+snort_src/snortrules-3000$ sudo cp ./builtins/builtins.rules /usr/local/etc/builtin_rules/
+itadmin@GOFSEC:~/snort_src/snortrules-3000$
+itadmin@GOFSEC:~/snort_src/snortrules-3000$ sudo cp ./etc/* /usr/local/etc/snort/
+itadmin@GOFSEC:~/snort_src/snortrules-3000$ sudo nano /usr/local/etc/snort/snort.lua
+itadmin@GOFSEC:~/snort_src/snortrules-3000$ clear
+itadmin@GOFSEC:~/snort_src/snortrules-3000$ snort -c /usr/local/etc/snort/snort.lua
+--------------------------------------------------
+o")~   Snort++ 3.0.3-4
+--------------------------------------------------
+Loading /usr/local/etc/snort/snort.lua:
+Loading snort_defaults.lua:
+Finished snort_defaults.lua:
+Loading file_magic.lua:
+Finished file_magic.lua:
+        ssh
+        hosts
+        host_cache
+        pop
+        so_proxy
+        stream_tcp
+        smtp
+        gtp_inspect
+        packets
+        dce_http_proxy
+        stream_icmp
+        normalizer
+        ftp_server
+        stream_udp
+        search_engine
+        ips
+        latency
+        binder
+ERROR: /usr/local/etc/snort/snort.lua: Type 'gtp' is not bindable
+ERROR: /usr/local/etc/snort/snort.lua: can't close binder
+        dce_smb
+        wizard
+        appid
+        file_id
+        ftp_data
+        port_scan
+        dce_http_server
+        dce_tcp
+        telnet
+        modbus
+        ssl
+        sip
+        host_tracker
+        rpc_decode
+        http_inspect
+        network
+        back_orifice
+        stream_user
+        stream_ip
+        trace
+        classifications
+        process
+        dnp3
+        active
+        ftp_client
+        decode
+        alerts
+        stream
+        references
+        arp_spoof
+        output
+        daq
+        dns
+        dce_udp
+        imap
+        stream_file
+Finished /usr/local/etc/snort/snort.lua:
+Loading ips.rules:
+FATAL: ips.rules:3 undefined variable name: RULE_PATH.
+Fatal Error, Quitting..
+snort_src/snortrules-3000$

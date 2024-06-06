@@ -1,0 +1,12 @@
+_______________________________________________
+Snort-users mailing list
+Snort-users@lists.snort.org
+Go to this URL to change user options or unsubscribe:
+https://lists.snort.org/mailman/listinfo/snort-users
+
+	To unsubscribe, send an email to:
+	snort-users-leave@lists.snort.org
+
+Please visit http://blog.snort.org to stay current on all the latest Snort news!
+
+Please follow these rules: https://snort.org/faq/what-is-the-mailing-list-etiquette
